@@ -10,7 +10,10 @@ books = [
 # Create your views here.
 def home(request):
     # context = [book['title'] for book in books]
-    return HttpResponse(f"<h1>{books}</h1>")
+    book = ""
+    for i in books:
+        book += f"<li>\"{i['title']}\" by {i['author']}</li>"
+    return HttpResponse(f"<ol><h2>{book}</h2></ol>")
 
 def show(request, id):
     # context = books[id-1] if id <= len(books) else None
