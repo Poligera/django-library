@@ -10,8 +10,14 @@
 <nav>
         {% comment %} <a href="{% url 'books-index' %}">Books</a> {% endcomment %}
         <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'login' %}">LOGIN</a>
+        
+        <a href="{% url 'logout' %}">LOGOUT</a>
         <a href="{% url 'register' %}">REGISTER</a>
-        {% comment %} <a href="{% url 'books-show' %}">Find</a> {% endcomment %}
+        {% comment %} {% block nav %}
+        {% endblock nav %} {% endcomment %}
+
+
 </nav>
     <main>
         <h1>Django LIBRARY project</h1>
