@@ -1,0 +1,10 @@
+{% extends 'library/base.html' %}
+{% block content %}
+<h3>Books currently available:</h3>
+ <ol>
+    {% for book in books  %}
+        <li>{{book}}<br></br></li>
+    {% endfor %}
+ </ol>
+{% endblock content %}
+

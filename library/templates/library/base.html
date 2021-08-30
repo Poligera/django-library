@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+</head>
+<body>
+<nav>
+        {% comment %} <a href="{% url 'books-index' %}">Books</a> {% endcomment %}
+        <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'register' %}">REGISTER</a>
+        {% comment %} <a href="{% url 'books-show' %}">Find</a> {% endcomment %}
+</nav>
+    <main>
+        <h1>Django LIBRARY project</h1>
+        <br></br>
+        {% block content %}
+        {% endblock content %}
+    </main>
+    
+</body>
+</html>
